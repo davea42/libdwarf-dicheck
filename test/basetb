@@ -1,0 +1,17 @@
+1 of test/testcase is a leading blank line 
+3:1 of test/testcase has a bad indent. 
+3:19 of test/testcase has 1 whitespace chars on the end. 
+5:2 of test/testcase has a bad indent. 
+7:3 of test/testcase has a bad indent. 
+9:37 of test/testcase has 1 whitespace chars on the end. 
+10 of test/testcase has a non-terminated quote
+15:1 of test/testcase is a tab. 
+15:2 of test/testcase has a bad indent. 
+19:26 of test/testcase has a bad indent change, last indent 8  cur indent 16
+25:2 of test/testcase has a bad indent. 
+26:3 of test/testcase has a bad indent. 
+27:21 of test/testcase has a bad indent change, last indent 3  cur indent 4
+28:8 of test/testcase has a for(, no space after for
+29:8 of test/testcase has an if  , 2+ spaces after if
+34:23 of test/testcase has 1 whitespace chars on the end. 
+In test/testcase last line is empty

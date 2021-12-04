@@ -1,0 +1,8 @@
+1 of test/test.c is a leading blank line 
+5:7 of test/test.c has an if(, no space after if
+8:4 of test/test.c has 1 whitespace chars on the end. 
+10:15 of test/test.c has 1 whitespace chars on the end. 
+11:5 of test/test.c has a bad indent. 
+13:11 of test/test.c has an if(, no space after if
+15:12 of test/test.c has an if  , 2+ spaces after if
+In test/test.c last line is empty
