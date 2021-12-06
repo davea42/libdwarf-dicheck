@@ -1,0 +1,35 @@
+ 
+ok pos 0  line 2
+ bad pos 1  line 3 
+ok pos 0  line 4
+  bad pos 2 line 5
+/* ok pos 0  line 6
+   ok in comment pos 3 line 7 */
+/*  comment if() ok l 8 */
+/*  comment followed by space l 9 */ 
+"      non-terminated l 10
+"  if() ok in quotes as is \" l11 "
+ok pos 0  line 12
+    ok pos 4  line 13
+    "   is this quote bad? "
+ 	bad tab line 14
+ok pos 0  line 15
+    ok pos 4  line 16
+        ok pos 8  line 17
+                bad pos 18
+ok pos 0  line 19
+    ok pos 4  line 20
+        ok pos 8  line 21
+            ok pos 12  line 22
+    ok pos 4  line 23, big skip ok
+  bad pos 2  line 24
+   bad pos 3  line 25
+    ok pos 4  line 26
+    for(i,j,k) line 27 bad
+    if  (i,j,k) line 28 bad
+    "if  (i,j,k) line 29 ok"
+    ok line 30
+    # indent ok line 31
+        ok indent line 32
+whitespace on end. 33  
+

@@ -1,0 +1,13 @@
+1 of test/testcase2 is a leading blank line 
+2 of test/testcase2 is a leading blank line 
+2 of test/testcase2 is 2 blank lines in a row
+9 of test/testcase2 is blank surrounded by }
+11:3 of test/testcase2 has a bad indent. 
+15 of test/testcase2 is 2 blank lines in a row
+16:38 of test/testcase2 has 1 whitespace chars on the end. 
+18:4 of test/testcase2 has 1 whitespace chars on the end. 
+18 of test/testcase2 is 2 blank lines in a row
+19 of test/testcase2 is 3 blank lines in a row
+20 of test/testcase2 is 4 blank lines in a row
+21 of test/testcase2 is 5 blank lines in a row
+In test/testcase2 last 5 lines are empty
