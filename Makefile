@@ -19,20 +19,25 @@ clean:
 	-rm -f junktd
 	-rm -f junkte
 	-rm -f junktf
+	-rm -f test/testt-a
 	-rm -f test/junk*
 	-rm -f junk.difference
 	-rm -f junktx
+	-rm -f test/testt-a
 
 installlocal: dicheck trimtrailing
 	cp dicheck      ~/bin
 	cp trimtrailing ~/bin
 
 check: dicheck trimtrailing
-	sh test/runtest.sh "./dicheck -h test/testcase" test/baseta
-	sh test/runtest.sh "./dicheck test/testcase"    test/basetb
-	sh test/runtest.sh "./dicheck -t test/testcase" test/basetc
-	sh test/runtest.sh "./dicheck -l src/dicheck.cc"   test/basetd
-	sh test/runtest.sh "./dicheck test/testcase2"   test/basete
-	sh test/runtest.sh "./dicheck test/test.c"      test/basetf
-	sh test/runtest.sh "./dicheck -l src/trimtrailing.cc" test/basetg
+	sh test/runtest.sh "./dicheck -h" "test/testcase"  test/baseta di
+	sh test/runtest.sh "./dicheck"    "test/testcase"  test/basetb di
+	sh test/runtest.sh "./dicheck -t" "test/testcase"  test/basetc di
+	sh test/runtest.sh "./dicheck -l" "src/dicheck.cc" test/basetd di
+	sh test/runtest.sh "./dicheck"    "test/testcase2" test/basete di
+	sh test/runtest.sh "./dicheck"    "test/test.c"    test/basetf di
+	sh test/runtest.sh "./dicheck -l" "src/trimtrailing.cc" test/basetg di
+	cp test/testcase2  test/testt-a
+	sh test/runtest.sh "./trimtrailing" "test/testt-a" test/basett-a tt
+	rm -f test/testt-a
 	@echo "PASS dicheck tests"
