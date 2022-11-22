@@ -1,7 +1,7 @@
 dicheck [-t] [-h] [-l] [-p] file ...
   where -t means ignore trailing whitespace
   where -h means print this message and nothing else.
-  where -l means report lines > 70 characters long
+  where -l means nothing now, lines longer than 70 characters get a warning
   where -p means python and # is comment not macro
   where --linelength=<n> means report lines greater
     than n characters long

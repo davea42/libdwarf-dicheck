@@ -77,7 +77,7 @@ using std::cin;
 static unsigned indentamount = 4;
 static bool showtrailingspaces (true);
 static unsigned errcount = 0;
-static bool checklinelength = false;
+static bool checklinelength = true; //cannot be turned off now.
 static bool pythonsource = false;
 static long  maxlinelength = 70;
 
@@ -557,8 +557,8 @@ usage()
     cout << "  where -t means ignore trailing whitespace" << endl;
     cout << "  where -h means print this message "
         "and nothing else." <<endl;
-    cout << "  where -l means report lines > 70"
-        " characters long"<<endl;
+    cout << "  where -l means nothing now,"
+        " lines longer than 70 characters get a warning"<<endl;
     cout << "  where -p means python and # is comment not macro" <<
         endl;
     cout << "  where --linelength=<n> means report lines "
