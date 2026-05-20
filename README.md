@@ -19,9 +19,13 @@ libdwarf codingstyle (see the
 libdwarf-code/codingstyle
 file in the libdwarf distribution)
 
-Add -l to the command and dicheck also reports
+dicheck also reports
 all lines longer than 70 characters
 (an arbitrary limit).
+
+It also reports of  printf or fflush as
+the first six characters of a line
+as probably leftover debug printf/fflush.
 
 ## trimtrailing
 

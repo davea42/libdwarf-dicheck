@@ -143,6 +143,20 @@ lastnmatch(const char *test_string,
     return true;
 }
 
+const char *pdebug = "printf";
+const char *pflush = "fflush";
+static bool
+is_debug_line(const char * line) 
+{
+    if (!strncmp((const char *)inbuf,pdebug,6)) {
+        return true;
+    }
+    if (!strncmp((const char *)inbuf,pflush,6)) {
+        return true;
+    }
+    return false;
+}
+
 static void
 process_a_line(int line,
     string   &path,
@@ -163,6 +177,11 @@ process_a_line(int line,
     bool trailingwhitespace = false;
     bool onelinecomment = false; // Meaning C++ comment.
     int  curlineindent = 0;
+
+    if (is_debug_line((const char *)inbuf)) {
+        cout << line << " of " << path  <<
+            " seems to be leftover debug printf" << endl;
+    }
     for (inpos = 0 ; inpos < incharcount ; ++inpos) {
         c = inbuf[inpos];
         bool onquoteterminator = false;
